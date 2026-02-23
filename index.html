@@ -4,71 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Para Minha Thamirys ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="stars"></div>
+    <div id="particles-js"></div>
+    <div class="overlay-gradient"></div>
+    <div class="scanline"></div>
 
     <section id="login-screen" class="screen active">
-        <div class="glass-card">
-            <div class="floating">🔐</div>
-            <h1>Área Privada</h1>
-            <p>Identifique-se, amor da minha vida:</p>
-            <input type="text" id="nome" placeholder="Nome">
-            <input type="text" id="sobrenome" placeholder="Sobrenome">
-            <input type="text" id="data" placeholder="Nascimento">
-            <button onclick="verificarAcesso()">Entrar no meu coração ❤️</button>
-            <p id="erro" class="msg-zoeira"></p>
+        <div class="glass-card-premium bounce-in">
+            <div class="main-heart-icon">
+                <span class="pulse-ring"></span>
+                <i class="emoji-main">🔐</i>
+            </div>
+            <h1 class="glitch-text" data-text="Área do Luiz">Área do Luiz</h1>
+            <p class="subtitle">Apenas para a Thamirys Nascimento</p>
+            
+            <div class="input-container">
+                <div class="input-field">
+                    <input type="text" id="nome" required placeholder=" ">
+                    <label>Seu primeiro nome</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="sobrenome" required placeholder=" ">
+                    <label>Seu sobrenome</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="data" required placeholder=" ">
+                    <label>Data de Nascimento (DD/MM/AAAA)</label>
+                </div>
+            </div>
+
+            <button class="btn-mega" onclick="verificarAcesso()">
+                <span>ABRIR MEU CORAÇÃO</span>
+                <div class="btn-blob"></div>
+            </button>
+            <p id="erro" class="error-msg"></p>
         </div>
     </section>
 
     <section id="intro-text" class="screen">
-        <div class="typing-container">
-            <h2 id="frase-intro"></h2>
+        <div class="glass-card">
+             <div class="typing-box">
+                <h2 id="frase-intro" class="dancing-script-text"></h2>
+             </div>
         </div>
     </section>
 
     <section id="mural-screen" class="screen">
-        <div class="mural-wrapper">
-            <h2 class="title-fofo">Um pouco de nós... ✨</h2>
-            <div class="card-frase">
-                <p id="frase-mural"></p>
+        <div class="mural-container">
+            <h2 class="section-title">Nossas Verdades ✨</h2>
+            
+            <div class="mural-card-wrapper">
+                <div class="card-frase-glass">
+                    <div class="quote-icon">"</div>
+                    <p id="frase-mural"></p>
+                    <div class="quote-icon-end">"</div>
+                </div>
             </div>
-            <button class="btn-clean" onclick="proximaFrase()">Mais frases 💕❤️</button>
-            
-            <div class="spacer"></div>
-            
-            <button class="btn-grand-finale" onclick="irParaFinal()">
-                Clica aqui para a surpresa final 🎁
-            </button>
+
+            <div class="nav-buttons">
+                <button class="btn-circle" onclick="proximaFrase()">
+                    <span>Mais frases ❤️💕</span>
+                </button>
+            </div>
+
+            <div class="final-trigger">
+                <button class="btn-shiny" onclick="irParaFinal()">
+                    O ÚLTIMO PASSO... 🎁
+                </button>
+            </div>
         </div>
     </section>
 
-   <section id="final-screen" class="screen">
-    <div class="final-container">
-        <h1 class="dancing">Nossa História 💍</h1>
-        
-        <div class="moldura-video-quadrada">
-            <video id="video-final" controls>
-                <source src="thamirys.mp4" type="video/mp4">
-                Seu navegador não suporta vídeos.
-            </video>
-        </div>
+    <section id="final-screen" class="screen scrollable-content">
+        <div class="master-container">
+            <header class="final-header">
+                <h1 class="pacific-title">Thamirys & Luiz</h1>
+                <div class="divider">❤</div>
+            </header>
 
-        <div class="sobre-mim-card">
-            <h3>Sobre o cara que te ama... ❤️</h3>
-            <p>Eu sou o <strong>Luiz</strong>, o cara mais sortudo por ter você. Sou eu quem vou te proteger, te fazer rir e te amar todos os dias!</p>
-            <div class="badges">
-                <span>#LuizEThamirys</span>
-                <span>#CasalZoeira</span>
+            <div class="video-section-premium">
+                <div class="video-frame">
+                    <div class="video-inner">
+                        <video id="video-final" controls playsinline>
+                            <source src="./thamirys.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <p class="video-caption">Aperta o play, amor! ☝️</p>
             </div>
+
+            <div class="love-letter-card">
+                <div class="wax-seal">L+T</div>
+                <h3>Carta do seu Luiz ❤️</h3>
+                <p class="letter-text">
+                    Thamirys, você sabe que eu sou viciado em videogame, mas você é o único "jogo" que eu nunca quero zerar. 
+                    Quero passar todas as fases do seu lado, enfrentar os "bosses" da vida e sempre ter você no meu time. 
+                    Você é minha jogadora número 1!
+                </p>
+                <div class="tag-cloud">
+                    <span>#MinhaGata</span>
+                    <span>#PraSempre</span>
+                    <span>#ViciadaNoLuiz</span>
+                    <span>#CasalDinamite</span>
+                </div>
+            </div>
+
+            <footer class="final-footer">
+                <button class="btn-restart" onclick="location.reload()">RECOMEÇAR TUDO ❤️</button>
+                <p>© 2024 - Feito com muito código e amor pelo Luiz.</p>
+            </footer>
         </div>
-        
-        <button class="btn-voltar" onclick="location.reload()">Recomeçar ❤️</button>
-    </div>
-</section>
+    </section>
 
     <audio id="musica" loop>
         <source src="sua-musica.mp3" type="audio/mpeg">
